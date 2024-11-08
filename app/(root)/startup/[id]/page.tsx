@@ -4,6 +4,7 @@ import { postsData } from "@/lib/utils";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import OrderModal from "@/components/main/OrderModal";
+import Image from "next/image";
 
 
 type postProps = {
@@ -39,6 +40,7 @@ const StartUpInfo = ({ params }: { params: Promise<{ id: string }> }) => {
         <p className="tag">{post?.class}</p>
 
         <h1 className="heading">{post?.name}</h1>
+        
         <p className="sub-heading !max-w-5xl">{post?.order}</p>
       </section>
 
@@ -48,6 +50,8 @@ const StartUpInfo = ({ params }: { params: Promise<{ id: string }> }) => {
           alt="thumbnail"
           className="w-full h-auto rounded-xl"
         /> */}
+
+        
 
         <div className="space-y-5 mt-10 max-w-4xl mx-auto">
           <div className="flex-between gap-5">

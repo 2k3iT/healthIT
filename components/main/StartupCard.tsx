@@ -6,7 +6,8 @@ import React from "react";
 
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
   return (
-    <li className="startup-card group w-96">
+    <Link href={`/startup/${post.id}`}>
+     <li className="startup-card group w-96">
       <div className="flex-between items-center">
         <p className="startup_card_date">{formatDate(post._createdAt)}</p>
         <div className="flex gap-1.5    ">
@@ -16,11 +17,10 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
       </div>
       <div className="flex-between mt-5 gap-5">
         <div className="flex-1">
-          <Link href={`/startup/${post.id}`}>
             <p className="text-160-medium font-bold line-clamp-1">
               {post.name}
             </p>
-          </Link>
+
           <div className="w-full justify-center items-center flex my-6">
             <Image
               src={post?.avatar}
@@ -33,6 +33,8 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </div>
       </div>
     </li>
+    </Link>
+   
   );
 };
 
