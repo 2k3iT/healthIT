@@ -21,7 +21,7 @@ export default function Home() {
         </p>
         <ul className="mt-7 card-grid flex flex-wrap gap-6">
           {postsData.length > 0 ? (
-            postsData?.map((post: StartupCardType) => (
+            postsData?.map((post) => (
               <StartupCard key={post?.id} post={post} />
             ))
           ) : (
