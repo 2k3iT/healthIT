@@ -1,8 +1,7 @@
 import OrderModel from "@/lib/models/orderModel";
-import { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 
-export async function PUT(req, context: any) {
+export async function PUT(req, context) {
   const { params } = await context;
   const itemChange = await req.json();
 

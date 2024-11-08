@@ -8,18 +8,16 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { signIn } from "@/auth";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const formSchema = z.object({
   email: z.string().email(),

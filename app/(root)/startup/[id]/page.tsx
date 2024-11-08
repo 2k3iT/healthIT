@@ -1,11 +1,10 @@
 "use client";
 
 import { postsData } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import OrderModal from "@/components/main/OrderModal";
-import axios from "axios";
+
 
 type postProps = {
   avatar?: string;

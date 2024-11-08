@@ -7,11 +7,11 @@ const loadDB = async () => {
 };
 loadDB();
 
-export async function GET(req: Request, res: Response) {
+export async function GET() {
   return NextResponse.json("Hello World");
 }
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const userData = await req.json();
 
   const { email, password } = userData;

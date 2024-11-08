@@ -29,21 +29,13 @@ interface orderDataType {
 
 const DataTable = () => {
   const [order, setOrder] = useState<orderDataType | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [ignored, forceUpdate] = useReducer((x) => x + 1, 0);
-  const appointments = {
-    scheduledCount: 0,
-    pendingCount: 1,
-    cancelledCount: 2,
-  };
+  const [ignored] = useReducer((x) => x + 1, 0);
+
 
   const fetchData = async () => {
-    setIsLoading(true);
     const res = await axios.get("/api/order");
-
     if (res.statusText === "OK") {
       setOrder(res.data);
-      setIsLoading(false);
     }
   };
 
@@ -90,7 +82,7 @@ const DataTable = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {order?.map((order: any, index) => {
+          {order?.map((order, index) => {
             const setButtonStyle = () => {
               switch (order.status) {
                 case "OK":

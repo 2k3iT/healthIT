@@ -1,6 +1,5 @@
 import SearchForm from "@/components/main/SearchForm";
 import StartupCard from "@/components/main/StartupCard";
-import { Button } from "@/components/ui/button";
 import { postsData } from "@/lib/utils";
 
 export default function Home() {
@@ -22,7 +21,7 @@ export default function Home() {
         </p>
         <ul className="mt-7 card-grid flex flex-wrap gap-6">
           {postsData.length > 0 ? (
-            postsData?.map((post: StartupCardType, index: number) => (
+            postsData?.map((post: StartupCardType) => (
               <StartupCard key={post?.id} post={post} />
             ))
           ) : (

@@ -12,10 +12,10 @@ loadDB();
 //   return NextResponse.json(data);
 // }
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const userData = await req.json();
 
-  const { email, name, password } = userData;
+  const { email} = userData;
 
   console.log(userData);
 
