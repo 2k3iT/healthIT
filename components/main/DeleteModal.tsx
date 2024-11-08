@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
@@ -12,8 +11,6 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
-import SuccessModal from "./SuccessModal";
-import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 
 const DeleteModal = ({ data, setDelete }: { data: any }) => {
