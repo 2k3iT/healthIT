@@ -7,12 +7,12 @@ const loadDB = async () => {
 };
 loadDB();
 
-export async function GET(req: Request, res: Response) {
+export async function GET(req: Request) {
   const data = await OrderModel.find();
   return NextResponse.json(data);
 }
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const orderData = await req.json();
   await OrderModel.create(orderData);
 
