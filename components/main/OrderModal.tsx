@@ -54,7 +54,7 @@ const OrderModal = ({ doctor }: { doctor: string }) => {
       date,
     };
 
-    const res = await axios.post("/api/order", formData);
+    await axios.post("/api/order", formData);
     setIsSuccess(true);
     toast.success("Bạn đã đặt lịch thành công");
   };

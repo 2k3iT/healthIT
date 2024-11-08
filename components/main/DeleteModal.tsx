@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const DeleteModal = ({ data, setDelete }: { data: any }) => {
+const DeleteModal = ({ data }) => {
   // const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
   const handleSubmit = async () => {

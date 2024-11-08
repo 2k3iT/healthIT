@@ -13,7 +13,7 @@ import { formatDateTime } from "@/lib/utils";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-export function InfoModal({ data, setRender }: { data: any }) {
+export function InfoModal({ data, setRender }) {
   const handleSubmit = async () => {
     await axios.put(`/api/order/${data._id}`, { status: "OK" }).then(() => {
       setRender(true);
